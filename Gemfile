@@ -7,6 +7,9 @@ end
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+gem 'font-awesome-sass', '~> 4.6', '>= 4.6.2'
+gem 'bootstrap-sass-extras', '~> 0.0.2'
+gem 'devise', '~> 4.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use postgresql as the database for Active Record

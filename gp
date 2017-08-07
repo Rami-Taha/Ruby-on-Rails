@@ -1,4 +1,4 @@
 git add -A
-git commit -m "contact update"
+git commit -m "solve mailer hardtime"
 git push origin master
 git push heroku master

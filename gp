@@ -1,4 +1,4 @@
 git add -A
-git commit -m "test file gp"
+git commit -m "setup devise mailer in heroku env."
 git push origin master
 git push heroku master

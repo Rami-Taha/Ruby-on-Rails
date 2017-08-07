@@ -1,4 +1,4 @@
 git add -A
-git commit -m "setup devise mailer in heroku env."
+git commit -m "contact update"
 git push origin master
 git push heroku master

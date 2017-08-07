@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   before_action :authenticate_user!
-  
+
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(params[:comment].permit(:body))
@@ -39,4 +39,5 @@ class CommentsController < ApplicationController
     redirect_to article_path(@article), notice: "Your comment has been deleted"
   end
 
+end
 end

@@ -1,3 +1,3 @@
 git add -A
-git commit -m "add comment views"
+git commit -m "update comment shows"
 git push origin comments

@@ -4,14 +4,12 @@
 <% @articles.each do |article| %>
  <!-- Blog article -->
  <!-- Title -->
- <h4 style="font-size: 45.5px;"><%= link_to article.title, article %></h4>
+ <h4 style="font-size: 35px;"><%= link_to article.title, article %></h4>
  <!-- Date/Time -->
- <p><span class="glyphicon glyphicon-time"></span>
+ <p><span class="glyphicon glyphicon-time"><%=time_ago_in_words(article.created_at)%></span>
  </p>
-
- <!-- Author -->
  <p>
- Article By:<strong> <%= article.user.username %></strong>
+   By:<strong> <%= article.user.username %></strong>
  </p>
  <hr>
  <!-- article Comments -->

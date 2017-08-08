@@ -13,7 +13,7 @@ by: <%= @article.user.username %>
  </p>
  <hr>
  <!-- Date/Time -->
- <p><span class="glyphicon glyphicon-time"></span> Was Posted:
+ <p><span class="glyphicon glyphicon-time"></span> Was Posted: <%=time_ago_in_words(@article.created_at)%> ago</P>
 
  <hr>
  <!-- Preview Image -->

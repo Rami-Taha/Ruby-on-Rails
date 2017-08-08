@@ -1,4 +1,3 @@
 git add -A
-git commit -m "set contact validation"
-git push origin master
-git push heroku master
+git commit -m "update comment shows"
+git push origin comments

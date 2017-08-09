@@ -4,8 +4,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all.paginate(:page => params[:page], :per_page => 3).order('updated_at DESC')
-    @recent = Article.last(5)
+    @articles = Article.all.paginate(:page => params[:page], :per_page => 5).order('updated_at DESC')
+    @recent = Article.order('updated_at DESC').last(5)
 
   end
 

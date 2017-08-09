@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource param_method: :my_sanitizer
   load_and_authorize_resource :through => :current_user
-  
+
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(params[:comment].permit(:body))
@@ -11,7 +11,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to article_path(@article), notice: "Your comment has been saved"
     else
-      redirect_to "new"
+      redirect_to @article
+      flash[:warning]= "There was a problem saving your comment, minimum characters is 5 and the maximum is 500"
     end
   end
 

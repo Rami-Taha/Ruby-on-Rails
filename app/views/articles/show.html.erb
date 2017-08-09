@@ -4,8 +4,8 @@
 
  <!-- Blog Post -->
  <!-- Title -->
- <h1 style="font-size: 62.5px;">
- <%= @article.title %>
+ <h1 style="font-size: 25.5px;">
+ <%= truncate(@article.title, length: 120) %>
  </h1>
  <!-- Author -->
  <p class="lead">

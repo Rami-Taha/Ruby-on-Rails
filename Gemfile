@@ -4,7 +4,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+gem 'pg', '~> 0.18'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'font-awesome-sass', '~> 4.6', '>= 4.6.2'
@@ -16,9 +16,8 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'cancancan', '~> 1.15'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
-
+gem 'simple_form_fancy_uploads'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -34,8 +33,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem 'sdoc', '~> 0.4.2', group: :doc
-gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -58,7 +55,7 @@ end
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
-  gem 'pg', '~> 0.18'
+
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

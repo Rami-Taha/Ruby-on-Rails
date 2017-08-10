@@ -1,7 +1,7 @@
 <div class="row">
  <!-- Blog Post Content Column -->
  <div class="col-lg-8">
-
+<%= @article.img_url %>
  <!-- Blog Post -->
  <!-- Title -->
  <h1 style="font-size: 25.5px;">
@@ -17,10 +17,8 @@ by: <%= @article.user.username %>
  <p><span class="glyphicon glyphicon-time"></span> Was Posted: <%=time_ago_in_words(@article.created_at)%> ago</P>
 
  <hr>
- <!-- Preview Image -->
 
- <!-- <hr> -->
- <!-- Post Content -->
+
 <%= @article.body %>
 <hr>
 

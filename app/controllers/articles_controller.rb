@@ -40,8 +40,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /articles/1
-  # PATCH/PUT /articles/1.json
+
   def update
     authorize! :update, @article
     respond_to do |format|
@@ -55,8 +54,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # DELETE /articles/1
-  # DELETE /articles/1.json
+
   def destroy
     authorize! :destroy, @article
     @article.destroy
@@ -67,13 +65,13 @@ class ArticlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_article
       @article = Article.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :img_url)
+      
     end
 end

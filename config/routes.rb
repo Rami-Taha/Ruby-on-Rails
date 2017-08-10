@@ -6,7 +6,7 @@ Rails.application.routes.draw do
      resources :comments
    end
    resources :contacts
-  root to: 'pages#index'
+  root to: 'articles#index'
   get 'pages/about'
   get 'pages/contact'
 

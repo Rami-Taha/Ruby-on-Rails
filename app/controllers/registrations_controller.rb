@@ -10,6 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
       :lastname,
       :avatar,
       :url
+
  )
 
 end
@@ -25,6 +26,7 @@ end
    :lastname,
    :avatar,
    :url
+
  )
  end
 end

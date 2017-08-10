@@ -15,10 +15,10 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'cancancan', '~> 1.15'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -34,11 +34,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+gem 'sdoc', '~> 0.4.2', group: :doc
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -61,7 +58,6 @@ end
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
-  # Use postgresql as the database for Active Record
   gem 'pg', '~> 0.18'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

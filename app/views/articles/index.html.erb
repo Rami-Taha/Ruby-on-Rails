@@ -23,8 +23,8 @@
  <div class="well commentcolor">
  <h4>Recent articles</h4>
  <% @recent.each do |a| %>
- Created by: <%= a.user.username %><br />
- <strong><%= link_to truncate(a.title, length: 30), a %></strong>
+ <strong><%= link_to truncate(a.title, length: 30), a %></strong><br />
+ Created by: <%= a.user.username %>
  <p><%= truncate(a.body, length:100) %></p>
  <% end %>
  </div>

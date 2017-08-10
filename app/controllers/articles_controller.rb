@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @recent = Article.order('updated_at DESC').last(5)
   end
 
   # GET /articles/new
@@ -72,6 +73,6 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :body, :img_url)
-      
+
     end
 end

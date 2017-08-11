@@ -3,8 +3,8 @@
  <div class="col-lg-8">
 <% @articles.each do |article| %>
  <!-- Blog article -->
- <!-- Title -->
- <h4 style="font-size: 25.5px;"><%= link_to truncate(article.title, length: 50), article %></h4>
+<%= image_tag article.image.url, class: "img-responsive" %>
+ <center><h4 style="font-size: 25.5px;"><%= link_to truncate(article.title, length: 50), article %></h4></center>
  <span class="glyphicon glyphicon-time media-heading pull-right"><%= time_ago_in_words(article.created_at)%> ago</span>
  <!-- Date/Time -->
  </p>

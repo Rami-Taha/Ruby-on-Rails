@@ -1,7 +1,7 @@
 <div class="row">
  <!-- Blog Post Content Column -->
  <div class="col-lg-8">
-<%= @article.img_url %>
+<%= image_tag @article.image.url, class: "img-responsive" %>
  <!-- Blog Post -->
  <!-- Title -->
  <h1 style="font-size: 25.5px;">
@@ -54,7 +54,7 @@ by: <%= @article.user.username %>
 
  <!-- Side Widget Well -->
  <div class="well commentcolor">
-   <h4>Recent articles</h4> 
+   <h4>Recent articles</h4>
     <% @recent.each do |a| %>
    Created by: <%= a.user.username %><br />
    <strong><%= link_to truncate(a.title, length: 30), a %></strong>

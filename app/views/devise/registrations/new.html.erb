@@ -11,6 +11,8 @@
     <%= f.input :password, required: true,
      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
+    <%= f.input :avatar, as: :file %>
+    <%= image_tag @user.avatar.url(:thumb), class:"img-circle" %>
   </div>
 
   <div class="form-actions">

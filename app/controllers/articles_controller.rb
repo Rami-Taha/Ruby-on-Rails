@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @recent = Article.order('updated_at DESC').last(5)
+    @recent = Article.order('updated_at DESC').last(4)
   end
 
   # GET /articles/new
